@@ -1,11 +1,29 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightBlog from 'starlight-blog';
 
 export default defineConfig({
   integrations: [
     starlight({
       title: 'Github for Scholars',
       description: 'A comprehensive guide to using Github for academic research, writing, and digital scholarship in the Humanities',
+      plugins: [
+        starlightBlog({
+          title: 'Research in Progress',
+          description: 'Following the development of an academic paper using Github version control',
+          authors: {
+            buildLittleWorlds: {
+              name: 'buildLittleWorlds',
+              title: 'Digital Humanities Scholar',
+              picture: '/author-avatar.jpg',
+              url: 'https://github.com/buildLittleWorlds'
+            }
+          },
+          postCount: 10,
+          recentPostCount: 5,
+          prefix: 'research-blog'
+        })
+      ],
       social: [
         { label: 'GitHub', href: 'https://github.com/buildLittleWorlds/github-for-scholars', icon: 'github' },
       ],
