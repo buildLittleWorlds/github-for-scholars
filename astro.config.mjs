@@ -6,9 +6,9 @@ export default defineConfig({
     starlight({
       title: 'Github for Scholars',
       description: 'A comprehensive guide to using Github for academic research, writing, and digital scholarship in the Humanities',
-      social: {
-        github: 'https://github.com/buildLittleWorlds/github-for-scholars',
-      },
+      social: [
+        { label: 'GitHub', href: 'https://github.com/buildLittleWorlds/github-for-scholars', icon: 'github' },
+      ],
       editLink: {
         baseUrl: 'https://github.com/buildLittleWorlds/github-for-scholars/edit/main/',
       },
@@ -78,12 +78,12 @@ export default defineConfig({
           ],
         },
       ],
-      customCss: [
-        './src/styles/custom.css',
-      ],
-      components: {
-        Header: './src/components/Header.astro',
-      },
+      // customCss: [
+      //   './src/styles/custom.css',
+      // ],
+      // components: {
+      //   Header: './src/components/Header.astro',
+      // },
     }),
   ],
 });
